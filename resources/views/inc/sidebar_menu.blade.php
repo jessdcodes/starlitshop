@@ -36,10 +36,10 @@
             </div>
 
 
-            <a href="#" class="bg-light list-group-item list-group-item-action">
+            <a href="/shop.starlit/public/products" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-shopping-cart fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Products</span>
+                    <span class="menu-collapsed" >Products</span>
                 </div>
             </a>
 
@@ -78,7 +78,7 @@
                     <span class="menu-collapsed">Calendar</span>
                 </div>
             </a>
-          
+
         </ul>
         <!-- List Group END-->
     </div>
