@@ -85,10 +85,7 @@
     <!-- sidebar-container END -->
 
     <!-- MAIN -->
-    <div class="col py-3">
-
-        @yield('content')
-
+    <div class="col py-3" id="main">
 
     </div>
     <!-- Main Col END -->
