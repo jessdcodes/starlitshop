@@ -17,7 +17,21 @@
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
                     <span class="menu-collapsed">Dashboard</span>
-                    <span class="submenu-icon ml-auto" ></span>
+                    <span class="fa fa-caret-left ml-auto" ></span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-shopping-cart fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Products</span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-users fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Suppliers</span>
                 </div>
             </a>
             <!-- Submenu content -->
@@ -35,8 +49,8 @@
             <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class=" list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Products</span>
-                    <span class="submenu-icon ml-auto"></span>
+                    <span class="menu-collapsed">Users</span>
+                    <span class="fa fa-caret-left ml-auto"></span>
                 </div>
             </a>
             <!-- Submenu content -->
@@ -48,12 +62,7 @@
                     <span class="menu-collapsed">Password</span>
                 </a>
             </div>
-            <a href="#" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Suppliers</span>
-                </div>
-            </a>
+
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                 <small>OPTIONS</small>
