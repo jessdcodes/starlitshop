@@ -14,12 +14,12 @@
     <title>Project</title>
   </head>
   <body>
-    @include('inc.navbar')
-    <aside class="main-sidebar">
-      <section class="sidebar">
-          @include('inc.sidebar_menu')
+    <header>
+        @include('inc.navbar')
+    </header>
 
-      </section>
+    <aside class="main-sidebar">
+      @include('inc.sidebar_menu')
     </aside>
   </body>
 </html>
