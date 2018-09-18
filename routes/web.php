@@ -15,3 +15,6 @@ Route::get('/','HomeController@index');
 
 Route::resource('products', 'ProductsController');
 Route::get('/products','ProductsController@index');
+
+Route::resource('suppliers', 'SuppliersController');
+Route::get('/suppliers','SuppliersController@index');
