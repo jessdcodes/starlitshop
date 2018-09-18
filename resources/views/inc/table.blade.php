@@ -1,4 +1,4 @@
-
+<div style="width:90%">
 <table id="myTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -16,7 +16,7 @@
 
         </tbody>
 </table>
-
+</div>
 <script type="text/javascript">
 
 $(document).ready( function () {
@@ -36,6 +36,6 @@ $(document).ready( function () {
            ]
         });
    });
-   
+
 });
 <!--script ending tag -->
