@@ -1,4 +1,4 @@
-@if(count($products))
+
 <table id="myTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -9,19 +9,33 @@
             </tr>
         </thead>
         <tbody>
-          @foreach($products as $product)
-            <tr>
-                <td>{{$product->name}}</td>
-                <td>{{$product->price}}</td>
-                <td>{{$product->category_id}}</td>
-                <td>{{$product->supplier_id}}</td>
+
+            <tr id="tr">
+
             </tr>
-           @endforeach
+
         </tbody>
 </table>
-@endif
+
 <script type="text/javascript">
+
 $(document).ready( function () {
-  $('#myTable').DataTable();
-} );
+
+  $.ajax({
+      'url': '{{ url('products') }}',
+      'method': "GET",
+      'contentType': 'application/json'
+  }).done( function(data) {
+        var example_table = $('#myTable').DataTable({
+          "aaData": data,
+          "columns": [
+            { "data": "name" },
+            { "data": "price" },
+            { "data": "category_id" },
+            { "data": "supplier_id" }
+           ]
+        });
+   });
+   
+});
 <!--script ending tag -->

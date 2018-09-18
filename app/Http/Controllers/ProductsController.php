@@ -14,7 +14,10 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('products.index')->with('products', $products);
+        if (\Illuminate\Support\Facades\Request::ajax())
+          return response()->json($products);
+        else
+          return view('products.index');
     }
 
     /**
@@ -24,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
