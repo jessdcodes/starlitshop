@@ -36,7 +36,7 @@
             </div>
 
 
-            <a href="/shop.starlit/public/products" class="bg-light list-group-item list-group-item-action">
+            <a href="/shop.starlit/public/products" class="bg-light list-group-item list-group-item-action" id="btnProducts">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-shopping-cart fa-fw mr-3"></span>
                     <span class="menu-collapsed" >Products</span>
@@ -92,3 +92,11 @@
 
 </div>
 <!-- body-row END -->
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $("#btnProducts").on("click", function (event) {
+        example_table.ajax.load();
+    });
+  });
+</script>

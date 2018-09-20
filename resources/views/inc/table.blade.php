@@ -2,10 +2,7 @@
 <table id="myTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Supplier</th>
+
             </tr>
         </thead>
         <tbody>
@@ -21,21 +18,69 @@
 
 $(document).ready( function () {
 
-  $.ajax({
-      'url': '{{ url('products') }}',
-      'method': "GET",
-      'contentType': 'application/json'
-  }).done( function(data) {
-        var example_table = $('#myTable').DataTable({
-          "aaData": data,
-          "columns": [
-            { "data": "name" },
-            { "data": "price" },
-            { "data": "category_id" },
-            { "data": "supplier_id" }
-           ]
-        });
-   });
+  var pathname = window.location.pathname;
 
+  if(pathname=="/shop.starlit/public/products"){
+    loadProducts();
+  }else if(pathname=="/shop.starlit/public/suppliers"){
+    loadSuppliers();
+  }
+  function loadProducts(){
+    var columns = [{
+            "sTitle": "Name",
+            "mData": "name"
+        }, {
+            "sTitle": "Price",
+            "mData": "price"
+        }, {
+            "sTitle": "Category_ID",
+            "mData": "category_id"
+        }, {
+            "sTitle": "Supplier_ID",
+            "mData": "supplier_id"
+        }]
+
+    $.ajax({
+        'url': '{{ url('products') }}',
+        'method': "GET",
+        'contentType': 'application/json'
+    }).done( function(data) {
+          var example_table = $('#myTable').DataTable({
+            "aaData": data,
+            "columns": columns
+          });
+     });
+  }
+
+  function loadSuppliers(){
+    var columns = [{
+            "sTitle": " Company Name",
+            "mData": "company_name"
+        }, {
+            "sTitle": "Contact Person",
+            "mData": "contact_person"
+        }, {
+            "sTitle": "Contact Number",
+            "mData": "contact_number"
+        }, {
+          "sTitle": "Contact Address",
+          "mData": "contact_address"
+        }
+        , {
+          "sTitle": "Contact Email",
+          "mData": "contact_email"
+        }]
+
+    $.ajax({
+        'url': '{{ url('suppliers') }}',
+        'method': "GET",
+        'contentType': 'application/json'
+    }).done( function(data) {
+          var example_table = $('#myTable').DataTable({
+            "aaData": data,
+            "columns": columns
+          });
+     });
+  }
 });
 <!--script ending tag -->
