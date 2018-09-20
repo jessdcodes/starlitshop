@@ -30,7 +30,7 @@
 
   </body>
 
-  <script type="text/javascript">
+  <script type="text/javascript" id="script1.js">
      $(document).ready(function(){
        mainContent();
 
@@ -43,6 +43,7 @@
 
          $('#main').append(output+'<\/script>');
        }
+        document.getElementById('script1.js').innerHTML = "";
      });
   </script>
 </html>

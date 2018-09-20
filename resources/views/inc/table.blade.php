@@ -14,7 +14,7 @@
         </tbody>
 </table>
 </div>
-<script type="text/javascript">
+<script type="text/javascript" id="script2.js">
 
 $(document).ready( function () {
 
@@ -82,5 +82,7 @@ $(document).ready( function () {
           });
      });
   }
+
+   document.getElementById('script2.js').innerHTML = "";
 });
 <!--script ending tag -->
